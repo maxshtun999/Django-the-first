@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+{% extends "wrapper.html" %}
+
+{% block content %}
+    {% for val in values %}
+        <P>{{ val }}</P>
+    {% endfor %}
+
+{% endblock %}
