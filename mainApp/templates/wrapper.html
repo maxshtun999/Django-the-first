@@ -1,13 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>За орду</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"
+          type="text/css">
 </head>
-<body style="background: palevioletred">
-{% block content %}
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Salam aleikum!</h1>
+        {% block content %}
+        {% endblock %}
+        <img src="{% static 'mainAppIMG/animeboi.jpg' %}" class="img-thumbnail"
+        <hr>
+        <p>
+            <a href="/" class="btn btn-success btn-lg">Main page</a>
+            <a href="/news" class="btn btn-primary btn-lg">More info&raquo;</a>
+        </p>
+    </div>
+</div>
+<div class="container">
+    &copy;all rights reserved 2019
+</div>
 
-{% endblock %}
 </body>
 </html>
