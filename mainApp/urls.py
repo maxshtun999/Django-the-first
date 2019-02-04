@@ -5,6 +5,10 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
 
-    url(r'^eng/$', views.contact, name='eng'),
+    # url(r'^contact/$', include('contact.urls')),
+
+    # url(r'^news/$', include('news.urls')),
+
+    # url(r'^help/$', include('help.urls')),
 ]
 #    include('mainApp.urls')
