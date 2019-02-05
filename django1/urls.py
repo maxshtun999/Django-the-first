@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^', include('mainApp.urls')),
     path('contacts/', include('contacts.urls')),
     url(r'^', include('help.urls')),
+    path('news/', include('news.urls'))
 ]
