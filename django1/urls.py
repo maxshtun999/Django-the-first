@@ -16,11 +16,11 @@ Including another URLconf
 #added path of contacts and binded it with urls
 from django.contrib import admin
 from django.conf.urls import include, url
-from django.urls import path
+from django.urls import path, re_path
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     url(r'^', include('mainApp.urls')),
-    path('contacts/', include('contacts.urls')),
-    url(r'^', include('help.urls')),
+    re_path(r'contacts/$', include('contacts.urls')),
+    re_path(r'help/$', include('Help.urls'))
 ]
