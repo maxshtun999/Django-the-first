@@ -21,6 +21,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     url(r'^', include('mainApp.urls')),
-    re_path(r'contacts/$', include('contacts.urls')),
-    re_path(r'help/$', include('Help.urls'))
+    path('contacts/', include('contacts.urls'), name="contacts"),
+    path('help/', include('Help.urls'))
 ]
