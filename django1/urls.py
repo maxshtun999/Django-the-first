@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^', include('mainApp.urls')),
     path('contacts/', include('contacts.urls'), name="contacts"),
     path('help/', include('Help.urls')),
-    path('news/', include('news.urls'))
+    path('news/', include('news.urls'), name = "news")
 ]

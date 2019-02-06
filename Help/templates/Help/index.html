@@ -4,22 +4,21 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/helpform.css' %}">
-    <div class="container">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname"
-               placeholder="Your name...">
+    <div class = "text-center"><h2>Message to administration</h2></div>
+    <form method="POST" class="post-form">{% csrf_token %}
+            <div class="container">
+                <tr><th><label for="id_first_name">First name:</label>
+                </th><td><input type="text" name="first_name" maxlength="20" required id="id_first_name"  placeholder="Your name..."></td></tr>
+                <tr><th><label for="id_last_name">Last name:</label>
+                </th><td><input type="text" name="last_name" maxlength="20" required id="id_last_name" placeholder="Your last name..."></td></tr>
+                <tr><th><label for="id_e_mail">E mail:</label>
+                </th><td><input type="email" name="e_mail" value=" " maxlength="254" required id="id_e_mail" placeholder="Email..."></td></tr>
+                <br>
+                <tr><th><label for="id_text">Text:</label>
+                </th><td><textarea name="text" cols="40" rows="10" required id="id_text" style="height:200px" placeholder="Write something.."></textarea></td></tr>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname"
-               placeholder="Your last name...">
-
-        <label for="e-mail">Email</label>
-        <input type="text" id="e-mail" name="E-mail" placeholder="Email...">
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.."
-                  style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
     </div>
-
+        </div>
+    </form>
 {% endblock %}

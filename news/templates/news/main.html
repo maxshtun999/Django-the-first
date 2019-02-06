@@ -3,14 +3,14 @@
 {% extends "wrapper.html" %}
 
 {% block content %}
-    <div class = "jumbotron">
-        <div class = "container">
+    <div class = "container">
+        <div class = "jumbotron">
             <h3 class="display-5">Latest news </h3>
                 {% if latest_news_list %}
 
                     {% for news in latest_news_list %}
                     <li>
-                    {{ news.news_headline}}
+                        <a href="{% url 'news:detail' news.id %}">{{ news.news_headline }}</a>
                     </li>
                 {% endfor %}
                 {% else %}
