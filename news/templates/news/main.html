@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
+
 {% extends "wrapper.html" %}
+{% load staticfiles %}
 
 {% block content %}
+    <link rel="stylesheet" href="{% static 'css/img.css' %}">
+    <img src="../static/mainAppIMG/trump.jpg" alt="Trump" class="center">
     <div class = "container">
         <div class = "jumbotron">
             <h3 class="display-5">Latest news </h3>
