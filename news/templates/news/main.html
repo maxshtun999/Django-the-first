@@ -3,13 +3,19 @@
 {% extends "wrapper.html" %}
 
 {% block content %}
+    <div class = "jumbotron">
+        <div class = "container">
+            <h3 class="display-5">Latest news </h3>
+                {% if latest_news_list %}
 
-{% if latest_news_list %}
-    {% for news in latest_news_list %}
-        {{ news.news_headline}}
-    {% endfor %}
- {% else %}
-    <h3>No news here</h3>
-{% endif %}
-
+                    {% for news in latest_news_list %}
+                    <li>
+                    {{ news.news_headline}}
+                    </li>
+                {% endfor %}
+                {% else %}
+                    <h3>No news here</h3>
+                {% endif %}
+        </div>
+    </div>
 {% endblock content %}
