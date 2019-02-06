@@ -9,6 +9,6 @@ urlpatterns = [
 
     # url(r'^news/$', include('news.urls')),
 
-    # url(r'^help/$', include('help.urls')),
+    # url(r'^Help/$', include('Help.urls')),
 ]
 #    include('mainApp.urls')
