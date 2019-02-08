@@ -4,6 +4,7 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/helpform.css' %}">
+
     <div class = "text-center"><h2>Message to administration</h2></div>
     <form method="POST" class="post-form">{% csrf_token %}
             <div class="container">
@@ -18,7 +19,7 @@
                 </th><td><textarea name="text" cols="40" rows="10" required id="id_text" style="height:200px" placeholder="Write something.."></textarea></td></tr>
 
             <input type="submit" value="Submit">
-    </div>
+            </div>
         </div>
     </form>
 {% endblock %}
