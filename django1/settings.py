@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'snippets.apps.SnippetsConfig',
+    'rest_framework',
     'Help.apps.HelpConfig',
     'news.apps.NewsConfig',
     'contacts.apps.ContactsConfig',
@@ -129,3 +131,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.IsAdminUser',
+    ],
+}
