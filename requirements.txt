@@ -1,2 +1,17 @@
 Django==2.1.5
 pytz==2018.9
+pygments ==2.3.1
+urllib3 == 1.24.1
+requests == 2.21.0
+idna == 2.8
+httpie = 1.0.2
+markdown == 3.0.1
+djangorestframework == 3.9.1
+django-passwords == 0.3.12
+django-ipware == 2.1.0
+django-filter == 2.1.0
+django-dajaxice == 0.7
+django-axes == 4.5.4
+django-appconf == 1.0.2
+colorama == 0.4.1
+chardet == 3.0.4
