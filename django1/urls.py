@@ -24,5 +24,6 @@ urlpatterns = [
     path('contacts/', include('contacts.urls'), name="contacts"),
     path('help/', include('Help.urls')),
     path('news/', include('news.urls'), name = "news"),
-    url(r'^api-auth/', include('rest_framework.urls'))
+    url(r'^api-auth/', include('rest_framework.urls')),
+    path('', include('snippets.urls'))
 ]
